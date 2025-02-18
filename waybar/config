@@ -1,0 +1,42 @@
+// WAYBAR CONFIG
+// Muttalip Temiz, (inspired by Stephan Raabe)
+{
+    // General Settings
+
+    // Position TOP
+    "layer": "top",
+    "margin-bottom": 0,
+    "height": 16,
+    "margin-right": 0,    
+    "spacing": 0,
+
+    // Load Modules
+    "include": [
+        "~/.config/waybar/modules.json"
+    ],
+
+    // Modules Left
+    "modules-left": [
+        "custom/appmenu",
+        "custom/browser",
+        "custom/terminal",
+ 	"custom/filemanager",
+        "hyprland/window"
+    ],
+
+    // Modules Center
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    // Modules Right    
+    "modules-right": [
+        "tray",
+        "pulseaudio",
+        "bluetooth",
+        "network",
+	"battery",
+        "clock",
+        "custom/exit"
+    ]
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cp ~/.config/hypr/subconf/monitors.d/built-in-monitor.conf ~/.config/hypr/subconf/monitors.d/current-monitor.conf
+
+echo  Built-in Monitor Setting is active.
