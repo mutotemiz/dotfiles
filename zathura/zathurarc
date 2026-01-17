@@ -1,2 +1,9 @@
 set synctex true
 set synctex-editor-command "nvr --remote-silent +%{line} %{input}"
+
+# Allow Zathura to use your system's window colors
+set window-titlebasename "true"
+
+# Scroll settings
+set smooth-scroll true
+set scroll-step 100
