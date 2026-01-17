@@ -1,0 +1,9 @@
+# Source all config files in ~/.config/bash
+if [ -d "$HOME/.config/bash" ]; then
+    for file in "$HOME/.config/bash"/*; do
+        # Check if it's a regular file and readable
+        if [ -f "$file" ] && [ -r "$file" ]; then
+            source "$file"
+        fi
+    done
+fi
