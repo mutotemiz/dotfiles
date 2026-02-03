@@ -1,12 +1,12 @@
 format = """
-[░▒▓](#a3aed2)\
-[  ](bg:#a3aed2 fg:#090c0c)\
-[](bg:#769ff0 fg:#a3aed2)\
+[░▒▓](#73ba25)\
+[  ](bg:#73ba25 fg:#000000)\
+[](bg:#475a5f fg:#73ba25)\
 $directory\
-[](fg:#769ff0 bg:#394260)\
+[](fg:#475a5f bg:#35b9ab)\
 $git_branch\
 $git_status\
-[](fg:#394260 bg:#212736)\
+[](fg:#35b9ab bg:#212736)\
 $python\
 $container\
 $nodejs\
@@ -19,7 +19,7 @@ $time\
 \n$character"""
 
 [directory]
-style = "fg:#e3e5e5 bg:#769ff0"
+style = "fg:#ffffff bg:#475a5f"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -35,45 +35,51 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:#394260"
-format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+style = "bg:#35b9ab"
+format = '[[ $symbol $branch ](fg:#000000 bg:#35b9ab)]($style)'
 
 [git_status]
-style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+style = "bg:#35b9ab"
+format = '[[($all_status$ahead_behind )](fg:#000000 bg:#35b9ab)]($style)'
 
 [python]
 symbol= ""
+# Updated to official Python Yellow
 style = "fg:#FFD43B bg:#212736"
-format = '[ $symbol \[$virtualenv\]]($style)'
+format = '[\[$symbol $virtualenv\]]($style)'
 
 [nodejs]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+format = '[[ $symbol ($version) ](fg:#35b9ab bg:#212736)]($style)'
 
 [rust]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+format = '[[ $symbol ($version) ](fg:#35b9ab bg:#212736)]($style)'
 
 [golang]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+format = '[[ $symbol ($version) ](fg:#35b9ab bg:#212736)]($style)'
 
 [php]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+format = '[[ $symbol ($version) ](fg:#35b9ab bg:#212736)]($style)'
 
 [container]
 symbol = ""
 format = "[$symbol $name]($style)"
-style = "bold #F7768E"
+style = "bold #35b9ab"
 
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
+time_format = "%R" 
 style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+format = '[[  $time ](fg:#73ba25 bg:#1d2230)]($style)'
+
+[character]
+success_symbol = "[❯](bold #73ba25)"
+error_symbol = "[❯](bold #f44336)"
+vimcmd_symbol = "[❮](bold #35b9ab)"
